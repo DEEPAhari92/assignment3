@@ -1,11 +1,21 @@
-const object1 = {
-    name: 'ABC',
-    address: 'India'
-  };
-      
-  const object2 = {
-    address: 'India',
-    name: 'ABC'
-  };
-console.log(_.isEqual(object1, object2));
+var obj1 = {name:"Person1", age:5};
+var obj2 = {age:5,name:"Person1"};
 
+
+var flag = true;
+if(Object.keys(obj1).length==Object.keys(obj2).length){
+    for(let key in obj1){
+        if(obj1[key]==obj2[key]){
+            continue;
+        }
+        else{
+            flag=flase;
+            break;
+        }
+    }
+}
+else{
+    flag = false;
+
+}
+console.log(flag);
